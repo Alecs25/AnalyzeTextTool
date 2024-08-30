@@ -15,7 +15,6 @@ export function previewFile(filesList: Object[], event: any) {
 			elementsToShow.forEach((e) => {
 				e.classList.remove("d-none");
 			});
-			// console.log(elementsToShow);
 		},
 		false
 	);
@@ -57,7 +56,6 @@ function populateList(values) {
 	values.forEach((i) => {
 		const node = document.createElement("li");
 		node.innerHTML = `<h4>Numero di ${i.name}: ${i.value.length}</h4>`;
-		console.log(node, i);
 		uList?.appendChild(node);
 		if (i.name === "Parole ripetute") {
 
@@ -69,12 +67,3 @@ function populateList(values) {
 		}
 	});
 }
-
-// console.log();
-
-//  array - legga un file da un path inserito in input dall’utente (può essere un path locale o un
-// indirizzo web)
-// - il numero totale di parole nel file: totalWords
-// - il numero di lettere nel file: totalLetters
-// - il numero di spazi nel file: totalWhitespaces
-// - le parole che si ripetono più di 10 volte e indicare il numero di volte in cui si ripete: repeatedWords
